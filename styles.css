@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 hmtl {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body { 
@@ -10,7 +10,7 @@ body {
 
 .site {
   display: grid;
-  padding: 10px;
+  padding: 10px 30px;
   border: 3px solid #000;
   grid-template-columns: minmax(328px, auto) 1fr;
   grid-template-rows: minmax(100px, auto) 1fr 1fr;
@@ -26,27 +26,58 @@ body {
 }
 
 #sidebar {
-  border:5px solid springgreen;
-  grid-area: sidebar;
-  grid-template-columns: 1fr repeat(2, minmax(auto, 15em)) 1fr;
-  
+  background-color: #273c75;
+  grid-area: sidebar;  
+  grid-auto-rows: 1fr minmax(100px, auto) 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  color: #fff;
+  padding: 20px auto;
+}
+
+.bar-div {
+  display: inline-grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px auto;
+  row-gap: 60px;
 }
 
 .logo {
-  grid-row: 1 / 2;
   grid-column: 2;
-  display: inline-grid;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon {
-  grid-area: icon
+.title { 
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
 }
 
-.title {
-  grid-area: text;
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+
+.menu-container {
+  grid-column: 2;
 }
 
+.settings-container {
+  grid-column: 2;
+  padding-bottom: 30px;
+}
 
+.menu-item,
+.settings-item {
+  list-style: none;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 1.3rem;
+  letter-spacing: 1.5%;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: 300;
+}
 
 #content {
   border: 5px solid coral;
