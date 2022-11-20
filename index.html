@@ -6,30 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
 
 <body>
   <div class="site">
-    <header id="header"></header>
+    <header id="header">
+
+      <!-- TOP -->
+      <div class="top-row">
+        <!-- LEFT SIDE OF HEADER -->
+        <div id="search-bar" class="left">
+          <label for="search-field"><span class="mdi mdi-magnify mdi-24"></span></label>
+          <input type="search" name="search-field" id="search-input">
+        </div>
+
+        <!-- RIGHT SIDE OF HEADER -->
+        <div id="account" class="right">
+          <div class="notification"><span class="mdi mdi-bell mdi-24px"></span></div>
+          <div class="user">
+            <img src="./img/stuart.jpg" style="width:50px; border-radius: 50%" alt="user-avatar">
+            <h6 class="name">Stuart the Minion</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="bottom-row">
+        <!-- USER GREETING -->
+        <div id="greeting" class="left">
+          <img src="./img/stuart.jpg" style="width:100px; border-radius: 50%" alt="user-avatar">
+          <div class="greet">Hello there,</div>
+          <h2 class="user-name">Stuart the Minion (@stuart.minion)</h2>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div id="button-group" class="right">
+          <div class="button">New</div>
+          <div class="button">Upload</div>
+          <div class="button">Share</div>
+        </div>
+      </div>
+        
+      </header>
     <aside id="sidebar">
       <div class="bar-div">
         <div class="logo">
           <h1 class="title"><span class="material-icons md-36">dashboard</span> Dashboard</h1>
         </div>
         <div class="menu-container">
-            <p class="menu-item"><span class="material-icons md-18">home</span> Home</p>
-            <p class="menu-item"><span class="material-icons md-18">person</span> Profile</p>
-            <p class="menu-item"><span class="material-icons md-18">chat</span> Message</p>
-            <p class="menu-item"><span class="material-icons md-18">history</span> History</p>
-            <p class="menu-item"><span class="material-icons md-18">task</span> Tasks</p>
-            <p class="menu-item"><span class="material-icons md-18">groups</span> Communities</p>
+          <p class="menu-item"><span class="material-icons md-18">home</span> Home</p>
+          <p class="menu-item"><span class="material-icons md-18">person</span> Profile</p>
+          <p class="menu-item"><span class="material-icons md-18">chat</span> Message</p>
+          <p class="menu-item"><span class="material-icons md-18">history</span> History</p>
+          <p class="menu-item"><span class="material-icons md-18">task</span> Tasks</p>
+          <p class="menu-item"><span class="material-icons md-18">groups</span> Communities</p>
         </div>
         <div class="settings-container">
-            <p class="settings-item"><span class="material-icons md-18">settings</span> Settings</p>
-            <p class="settings-item"><span class="material-icons md-18">help</span> Support</p>
-            <p class="settings-item"><span class="material-icons md-18">verified_user</span> Pivacy</p>
+          <p class="settings-item"><span class="material-icons md-18">settings</span> Settings</p>
+          <p class="settings-item"><span class="material-icons md-18">help</span> Support</p>
+          <p class="settings-item"><span class="material-icons md-18">verified_user</span> Pivacy</p>
         </div>
       </div>
     </aside>

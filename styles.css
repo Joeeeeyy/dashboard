@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-hmtl {
+* {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -17,26 +17,50 @@ body {
   grid-template-areas: "sidebar header"
             "sidebar main";
   column-gap: 10px;
-  row-gap: 10px;
 }
 
 #header {
   border: 5px solid blueviolet;
   grid-area: header;
+  display: inline-grid;
+  grid-template-columns: 1fr repeat(2, 4fr) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+  grid-template-areas: "left right"
+                        "left right";
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.top-row {
+  display: inline-grid;
+  grid-area: top;
+  grid-template-areas: "left right";
+}
+.bottom-row {
+  display: inline-grid;
+  grid-area: bottom;
+  grid-template-areas: "left right";
 }
 
 #sidebar {
   background-color: #273c75;
   grid-area: sidebar;  
-  grid-auto-rows: 1fr minmax(100px, auto) 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-auto-rows: 1fr minmax(75px, auto) 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: #fff;
-  padding: 20px auto;
+  padding: 20px 5px;
 }
 
 .bar-div {
   display: inline-grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 100px auto;
   row-gap: 60px;
 }
@@ -75,7 +99,7 @@ body {
   font-size: 1.3rem;
   letter-spacing: 1.5%;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
   font-weight: 300;
 }
 
