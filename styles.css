@@ -107,6 +107,25 @@
   align-items: center;
   justify-content: space-evenly;
 }
+#header .top-row #account .user .user-img {
+  grid-area: user-pic;
+}
+#header .top-row #account .user .name {
+  grid-area: name;
+  font-weight: 500;
+  font-size: 1rem;
+}
+#header .bottom-row {
+  display: inline-grid;
+  grid-area: bottom;
+  grid-template-columns: 3fr 2fr 3.5fr;
+}
+#header .bottom-row #greeting {
+  grid-column: 1;
+}
+#header .bottom-row #button-group {
+  grid-column: 3;
+}
 
 #content {
   border: 5px solid coral;
