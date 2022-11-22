@@ -1,0 +1,25 @@
+@import '../node_modules/normalize.css/normalize.css';
+@import "../scss/sidebar";
+@import "../scss/header";
+@import "../scss/content";
+@import "../scss/fonts";
+
+* {
+   font-weight: 300;
+}
+
+body {
+   font-family: $main-font;
+   height: 100vh;
+}
+
+.site {
+   display: grid;
+   padding: 10px 30px;
+   border: 3px solid #000;
+   grid-template-columns: minmax(328px, auto) 1fr;
+   grid-template-rows: minmax(100px, auto) 1fr 1fr;
+   grid-template-areas: "sidebar header"
+      "sidebar main";
+   column-gap: 10px;
+}

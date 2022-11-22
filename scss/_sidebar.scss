@@ -1,0 +1,60 @@
+@import "../scss/fonts";
+
+#sidebar {
+   background-color: #273c75;
+   grid-area: sidebar;
+   grid-auto-rows: 1fr minmax(75px, auto) 1fr;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   color: #fff;
+   padding: 20px 5px;
+}
+
+.bar-div {
+   display: inline-grid;
+   grid-template-columns: 1fr 3fr 1fr;
+   grid-template-rows: 100px auto;
+   row-gap: 60px;
+}
+
+.logo {
+   grid-column: 2;
+   grid-row: 1;
+   align-items: center;
+   justify-content: center;
+}
+
+.title {
+   font-size: 2.2rem;
+   font-weight: 600;
+   text-align: center;
+   font-family: $main-font;
+   line-height: 1.6;
+}
+
+.material-icons.md-18 {
+   font-size: 18px;
+}
+
+.material-icons.md-24 {
+   font-size: 24px;
+}
+
+.menu-container {
+   grid-column: 2;
+}
+
+.settings-container {
+   grid-column: 2;
+   padding-bottom: 30px;
+}
+
+.menu-item,
+.settings-item {
+   list-style: none;
+   font-family:$main-font;
+   font-size: 1.3rem;
+   letter-spacing: 1.5%;
+   align-items: center;
+   margin: 10px auto;
+   font-weight: 300;
+}
