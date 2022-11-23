@@ -4,56 +4,57 @@
    display: inline-grid;
    grid-template-rows: repeat(2, 1fr);
    gap: 0.5rem;
-   grid-template-areas: "top"
-   "bottom";
+   grid-template-areas:
+      "top"
+      "bottom";
    padding: 20px;
-   
+
    .top-row {
       display: inline-grid;
       grid-template-columns: 4.5fr auto 2.5fr;
       grid-area: top;
       justify-content: center;
       align-items: center;
-      
+
       #search-bar {
          grid-column: 1;
          display: inline-grid;
          grid-template-areas: "icon search-box";
          align-items: center;
          font-size: 1.5rem;
-         
+
          .search-icon {
             grid-area: icon;
          }
-         
+
          #search-input {
             grid-area: search-box;
          }
       }
-      
-      #account {                                          
+
+      #account {
          grid-column: 3;
          display: inline-grid;
          grid-template-areas: "notification user";
          align-items: center;
          justify-content: right;
-         
+
          .notification {
             grid-area: notification;
             justify-content: right;
          }
-         
+
          .user {
             grid-area: user;
             display: inline-grid;
             grid-template-areas: "user-pic name";
             align-items: center;
             justify-content: space-evenly;
-            
+
             .user-img {
                grid-area: user-pic;
             }
-            
+
             .name {
                grid-area: name;
                font-weight: 500;
@@ -62,24 +63,69 @@
          }
       }
    }
-   
+
    .bottom-row {
       display: inline-grid;
       grid-area: bottom;
-      grid-template-columns: 3fr 2fr 3.5fr;
-      
+      grid-template-columns: 3fr auto 3.5fr;
+      align-items: center;
+      justify-content: center;
+
       #greeting {
          grid-column: 1;
+         display: inline-grid;
+         grid-template-columns: auto 3fr 2fr;
+         grid-template-areas: "profile-img greeting handle";
+         align-items: center;
+         justify-content: center;
+         column-gap: 1.5rem;
+
+         .profile-img {
+            grid-area: profile-img;
+         }
+
+         .greet-div {
+            grid-area: greeting;
+            grid-column: 2;
+
+            .user-name {
+               font-weight: 600;
+               font-size: 1rem;
+
+            }
+         }
+
+         .handle {
+            grid-area: handle;
+            grid-column: 3;
+         }
+      }
+
+      #button-group {
+         grid-column: -1;
+         display: inline-grid;
+         grid-template-columns: repeat(3, 1fr);
+
+            
+         }
       }
       
-      #button-group {
-         grid-column: 3;
+      a {
+         border: 3px solid #273c75;
+         background-color: #fff;
+         text-decoration: none;
+         text-decoration: none;
+         color: #273c75;
+         padding: 20px;
+         margin: 0 auto;
+         transition: 0.4ms;
+         border-radius: 5px;
+         display: inline-block;
+         
+         &:hover {
+            color: #fff;
+            background-color: #273c75;
+            color: #fff;
+         }
       }
    }
-}
-
-
-
-
-
-

@@ -118,13 +118,55 @@
 #header .bottom-row {
   display: inline-grid;
   grid-area: bottom;
-  grid-template-columns: 3fr 2fr 3.5fr;
+  grid-template-columns: 3fr auto 3.5fr;
+  align-items: center;
+  justify-content: center;
 }
 #header .bottom-row #greeting {
   grid-column: 1;
+  display: inline-grid;
+  grid-template-columns: auto 3fr 2fr;
+  grid-template-areas: "profile-img greeting handle";
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+#header .bottom-row #greeting .profile-img {
+  grid-area: profile-img;
+}
+#header .bottom-row #greeting .greet-div {
+  grid-area: greeting;
+  grid-column: 2;
+}
+#header .bottom-row #greeting .greet-div .user-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+#header .bottom-row #greeting .handle {
+  grid-area: handle;
+  grid-column: 3;
 }
 #header .bottom-row #button-group {
-  grid-column: 3;
+  grid-column: -1;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#header a {
+  border: 3px solid #273c75;
+  background-color: #fff;
+  text-decoration: none;
+  text-decoration: none;
+  color: #273c75;
+  padding: 20px;
+  margin: 0 auto;
+  transition: 0.4ms;
+  border-radius: 5px;
+  display: inline-block;
+}
+#header a:hover {
+  color: #fff;
+  background-color: #273c75;
+  color: #fff;
 }
 
 #content {
