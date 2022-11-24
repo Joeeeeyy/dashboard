@@ -1,12 +1,18 @@
 @import "../scss/fonts";
+@import "../scss/colors";
 
 #sidebar {
-   background-color: #273c75;
+   background-color: $black;
    grid-area: sidebar;
-   grid-auto-rows: 1fr minmax(75px, auto) 1fr;
+   grid-auto-rows: 1fr 1fr 1fr;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    color: #fff;
    padding: 20px 5px;
+   border: 1px solid $black;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   width: 96.5%;
+   // max-height: 1440px;
 }
 
 .bar-div {
